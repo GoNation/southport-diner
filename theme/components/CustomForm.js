@@ -7,20 +7,26 @@ export const CustomForm = {
       p: [4, 4, 12],
       maxW: ['2xl'],
       mx: 'auto',
-      bg: 'light',
+      bg: 'dark',
       border: '1px solid',
-      borderColor: 'gray.300',
+      borderColor: 'accent',
       my: 8,
       height: '100%',
+    },
+    address: {
+      color: 'white',
+    },
+    phone: {
+      color: 'white',
     },
     heading: {
       as: 'h2',
       textAlign: 'center',
       fontSize: { base: '4xl', lg: 'xl', xl: '4xl' },
       mb: 1,
-      fontWeight: 300,
-      textTransform: 'capitalize',
-      color: 'gray.800',
+      fontWeight: 800,
+      textTransform: 'uppercase',
+      color: 'white',
     },
     infoSection: {
       my: 4,
@@ -29,7 +35,7 @@ export const CustomForm = {
     },
     desc: {
       mb: 4,
-      color: 'dark',
+      color: 'white',
     },
     grid: {
       gap: 4,

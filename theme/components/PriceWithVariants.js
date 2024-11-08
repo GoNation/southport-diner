@@ -1,22 +1,18 @@
 export const PriceWithVariants = {
   baseStyle: {
     labelTitle: {
-      textTransform: 'uppercase',
       fontFamily: 'body',
-      fontSize: 'sm',
+      fontSize: 'xs',
     },
     label: {
-      textTransform: 'uppercase',
-      fontSize: 'sm',
+      fontSize: 'xs',
       fontFamily: 'body',
       color: 'dark',
-      fontWeight: 'bold',
     },
     price: {
-      fontSize: 'sm',
+      fontSize: 'xs',
       fontFamily: 'body',
       color: 'dark',
-      fontWeight: 'bold',
     },
   },
   variants: {},

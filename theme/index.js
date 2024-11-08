@@ -39,6 +39,7 @@ import { MinimalHours } from './MinimalHours';
 import { SocialLinks } from './SocialLinks';
 import { Phone } from './Phone';
 import { Address } from './Address';
+import { MasonryBoxes } from './components/MasonryBoxes';
 
 const theme = extendTheme({
   colors,
@@ -87,6 +88,7 @@ const theme = extendTheme({
     SocialLinks,
     Phone,
     Address,
+    MasonryBoxes,
   },
 });
 

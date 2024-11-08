@@ -15,12 +15,15 @@ import makeSentencesCapital from 'helpers/general/makeSentanceCapital';
 import Lightbox from './Lightbox';
 import { BsCamera } from 'react-icons/bs';
 import { useTheme } from '@emotion/react';
+import { useImageVisibility } from 'components/ImageVisibilityContext';
 
 const MenuItem = ({ item, withDollar, sectionImagesCount, variant = null }) => {
   const styles = useStyleConfig('MenuItem', { variant });
   const [lightboxSrc, setLightboxSrc] = useState('');
   const { isOpen, onOpen, onClose } = useDisclosure();
   const theme = useTheme();
+  const imageVisibility = useImageVisibility();
+  const showImages = imageVisibility?.showImages;
 
   if (!item) return null;
 
@@ -39,7 +42,7 @@ const MenuItem = ({ item, withDollar, sectionImagesCount, variant = null }) => {
     onOpen();
   };
 
-  const showCamera = false;
+  const showCamera = showImages;
 
   return (
     <Box {...styles.container}>
@@ -49,8 +52,13 @@ const MenuItem = ({ item, withDollar, sectionImagesCount, variant = null }) => {
         caption={item.name}
         onClose={onClose}
       />
-
-      <Grid templateColumns={sectionImagesCount === 0 ? ['1fr'] : ['1fr']}>
+      <Grid
+        templateColumns={sectionImagesCount === 0 ? ['1fr'] : ['1fr']}
+        border={'1px solid'}
+        borderColor={'gray.100'}
+        borderRadius={'md'}
+        pr={5}
+      >
         {/* todo will need to bring this back / handle props for conditional rendering inline images */}
         {/* {sectionImagesCount > 0 && (
           <Box {...styles.imageContainer}>
@@ -61,12 +69,15 @@ const MenuItem = ({ item, withDollar, sectionImagesCount, variant = null }) => {
           </Box>
         )} */}
 
-        <Box>
+        <Box
+          {...styles?.itemContainer}
+          onClick={() => imageExists && handleImageClick()}
+        >
           <Grid
             templateColumns="1fr"
             gap={4}
-            onClick={() => (imageExists ? handleImageClick() : null)}
             cursor={imageExists ? 'pointer' : 'default'}
+            maxWidth={'25%'}
           >
             <Tooltip
               label="Click to view image"
@@ -74,7 +85,7 @@ const MenuItem = ({ item, withDollar, sectionImagesCount, variant = null }) => {
               isDisabled={!imageExists}
             >
               <Box>
-                {imageExists ? (
+                {showImages && imageExists ? (
                   <Box my={2}>
                     <Image
                       src={imageCopy}
@@ -87,36 +98,36 @@ const MenuItem = ({ item, withDollar, sectionImagesCount, variant = null }) => {
                 ) : (
                   ''
                 )}
-
-                <Text {...styles.heading}>
-                  {item.name}{' '}
-                  {imageExists && showCamera && (
-                    <Box as="span" ml={2}>
-                      <BsCamera color={primaryColor} size={18} />
-                    </Box>
-                  )}
-                </Text>
               </Box>
             </Tooltip>
           </Grid>
-          {item.desc && (
-            <Text {...styles.description}>
-              {makeSentencesCapital(item.desc)}
+          <Box {...styles?.contentContainer}>
+            <Text {...styles.heading}>
+              {item.name}{' '}
+              {!showImages && imageExists && (
+                <Box as="span" ml={2}>
+                  <BsCamera color={primaryColor} size={18} />
+                </Box>
+              )}
             </Text>
-          )}
-        </Box>
-
-        <Box>
-          {item.variants?.length === 1 && (
-            <Price withDollar={true} variants={item.variants} />
-          )}
-          {item.variants?.length > 1 || item.variants?.[0]?.label !== '' ? (
-            <PriceWithVariants
-              withDollar={withDollar}
-              variants={item.variants}
-              gridRow="4"
-            />
-          ) : null}
+            {item.desc && (
+              <Text {...styles.description}>
+                {makeSentencesCapital(item.desc)}
+              </Text>
+            )}
+            <Box flex={1}>
+              {item.variants?.length === 1 && (
+                <Price withDollar={true} variants={item.variants} />
+              )}
+              {item.variants?.length > 1 || item.variants?.[0]?.label !== '' ? (
+                <PriceWithVariants
+                  withDollar={withDollar}
+                  variants={item.variants}
+                  gridRow="4"
+                />
+              ) : null}
+            </Box>
+          </Box>
         </Box>
       </Grid>
     </Box>

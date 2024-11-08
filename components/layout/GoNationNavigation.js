@@ -7,6 +7,7 @@ import Burger from './Burger';
 import TopBarNav from './TopBarNav';
 import SocialLinks from 'components/ui/SocialLinks';
 import { useRouter } from 'next/router';
+import Image from 'next/image';
 
 const GoNationNavigation = ({ routes, business, navSettings }) => {
   const theme = useTheme();
@@ -74,8 +75,8 @@ const GoNationNavigation = ({ routes, business, navSettings }) => {
   };
 
   const navStyles = {
-    logoWidth: hasScrolled ? [75, 75] : [75, 75, 200],
-    logoHeight: hasScrolled ? [75, 75] : [75, 75, 200],
+    logoWidth: hasScrolled ? [75, 100, 120] : [150, 150, 200],
+    logoHeight: hasScrolled ? [75, 100, 120] : [150, 150, 200],
     businessLogoContainerStyles: {
       display: 'flex',
       alignItems: 'center',
@@ -99,12 +100,12 @@ const GoNationNavigation = ({ routes, business, navSettings }) => {
     },
     burgerStyles: {
       position: 'absolute',
-      top: hasScrolled ? 3 : 7,
+      top: hasScrolled ? [3, 3, 8] : 10,
       right: 5,
-      color: navIsOpen ? primary : '#fff',
+      color: navIsOpen || hasScrolled ? '#fff' : '#fff',
       zIndex: 999999999,
       size: 24, // default size
-      display: ['block', '', '', '', 'none'],
+      display: ['block', '', '', '', ''],
       //   bg: hasScrolled ? 'white' : 'transparent',
       //   border: '2px solid',
       //   borderColor: hasScrolled ? 'primary' : 'transparent',
@@ -118,29 +119,28 @@ const GoNationNavigation = ({ routes, business, navSettings }) => {
       display: ['flex', '', '', ''],
       flexDir: 'column',
       textAlign: 'center',
-      position: 'fixed',
+      //   position: 'fixed',
       top: 0,
       left: 0,
       bottom: 0,
       zIndex: 999,
       width: '100%',
-      bg: 'gray.800',
+      bg: 'dark',
       height: '100vh',
-      position: 'fixed',
+      //   position: 'fixed',
       px: 3,
-      pt: 32,
 
+      justifyContent: 'center',
+      alignItems: 'center',
       // Other mobile-specific styles
     },
 
     navItemStyles: {
-      borderBottom: ['1px solid', '', 'none'],
       py: [3, 4, 4],
-      borderColor: 'gray.100',
       color: ['white', '', 'white'],
       fontWeight: [600],
       textTransform: 'uppercase',
-      fontSize: ['lg', 'lg', 'md'],
+      fontSize: ['xl', '2xl', '', '2xl'],
       fontFamily: 'body',
       letterSpacing: '0.1em',
       ml: [0, 0, 0, 0, 4],
@@ -159,7 +159,7 @@ const GoNationNavigation = ({ routes, business, navSettings }) => {
       // Other mobile-specific styles
     },
     largeNavItemsStyles: {
-      display: ['none', '', '', '', 'flex'],
+      display: ['none', '', '', '', ''],
       alignItems: 'center',
 
       // Other large screen-specific styles
@@ -181,10 +181,10 @@ const GoNationNavigation = ({ routes, business, navSettings }) => {
         as="nav"
         justifyContent={'space-between'}
         alignItems="center"
-        p={2}
-        px={[2, 2, 2, 2, 8]}
+        p={[2, 2, 4]}
+        px={[2, 2, 8, 8, 8]}
         position={['fixed']}
-        bg={hasScrolled ? 'gray.800' : 'transparent'}
+        bg={hasScrolled ? 'rgba(0,0,0,.8)' : 'transparent'}
         width="100%"
         zIndex={999999}
         transition={'background-color 0.3s ease'}
@@ -215,19 +215,47 @@ const GoNationNavigation = ({ routes, business, navSettings }) => {
           display={{ base: 'flex', md: 'none' }}
         />
       </Flex>
-      <Box pos="relative">
+      <Box
+        pos="relative"
+        display={['block', 'block', 'flex']}
+        position={'fixed'}
+        zIndex={99999}
+        width={'100%'}
+      >
         {navIsOpen && (
-          <NavigationItems
-            navItemStyles={{
-              ...navStyles.navItemStyles,
-            }}
-            routes={navRoutesUnfiltered}
-            styles={{
-              ...navStyles.sharedNavItemsStyles,
-              ...navStyles.mobileNavItemsStyles,
-            }}
-            closeNav={closeNav}
-          />
+          <>
+            <Box
+              color={'white'}
+              zIndex={9999}
+              flex={1}
+              display={['none', 'none', 'block']}
+            >
+              <Image
+                src={
+                  'https://res.cloudinary.com/gonation/image/upload/v1727282144/gonation.data.prod/ldhg3xpjlgyyfvzlprjc.webp'
+                }
+                width={900}
+                height={1200}
+                style={{
+                  objectFit: 'cover',
+                }}
+              />
+            </Box>
+            <Box flex={1} zIndex={999} height={'100vh'}>
+              <NavigationItems
+                navItemStyles={{
+                  ...navStyles.navItemStyles,
+                }}
+                routes={navRoutesUnfiltered}
+                styles={{
+                  ...navStyles.sharedNavItemsStyles,
+                  ...navStyles.mobileNavItemsStyles,
+                }}
+                closeNav={closeNav}
+                business={business}
+              />
+            </Box>
+          </>
         )}
       </Box>
 

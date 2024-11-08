@@ -17,7 +17,7 @@ const Lightbox = ({ isOpen, onClose, src, caption }) => {
       left="0"
       right="0"
       bottom="0"
-      zIndex="1000"
+      zIndex="99999999999"
       display="flex"
       alignItems="center"
       justifyContent="center"
@@ -29,7 +29,7 @@ const Lightbox = ({ isOpen, onClose, src, caption }) => {
         <Box
           bg="white"
           p="5"
-          maxH="85vh"
+          //   maxH="85vh"
           display="flex"
           flexDirection="column"
           border={'2px dotted'}
@@ -48,7 +48,7 @@ const Lightbox = ({ isOpen, onClose, src, caption }) => {
               color={'accent'}
               fontFamily={'heading'}
             >
-              <Text>{caption}</Text>
+              <Text fontWeight={'bold'}>{caption}</Text>
             </Box>
           )}
           <Button onClick={onClose} alignSelf="center" variant="primary">

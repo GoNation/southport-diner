@@ -3,7 +3,7 @@ import { FaArrowLeft } from 'react-icons/fa';
 import Masonry from './gallery/Masonry';
 import Album from './Album';
 import { useRouter } from 'next/router';
-import { Box, Grid, Button, Text } from '@chakra-ui/react';
+import { Box, Grid, Button, Text, Heading } from '@chakra-ui/react';
 
 export default function AlbumGallery({
   galleryData,
@@ -32,7 +32,7 @@ export default function AlbumGallery({
       py={12}
       className="with-texture"
       textAlign={['center', 'left']}
-      bg={activeAlbum ? 'background' : 'background'}
+      bg={'dark'}
     >
       {activeAlbum ? (
         <>
@@ -40,7 +40,7 @@ export default function AlbumGallery({
             <FaArrowLeft />
             <Box ml={4}>Go Back to Albums</Box>
           </Button>
-          <Text {...albumNameStyle}>{activeAlbum.name}</Text>
+          <Heading {...albumNameStyle}>{activeAlbum.name}</Heading>
           <Masonry
             data={[activeAlbum]}
             config={{
@@ -61,12 +61,13 @@ export default function AlbumGallery({
         >
           {galleryData?.length &&
             galleryData
-              .filter(
-                abm =>
-                  !filteredOutAlbums.includes(
-                    abm.name.toLowerCase().trim(' ')
-                  ) && !config?.filterOutAlbumIds?.includes(abm._id)
-              )
+              .filter(a => {
+                console.log('album is: ', a.name, ' and id is: ', a._id);
+                return (
+                  a._id.includes('abm-') &&
+                  !a.name.toLowerCase().includes('shouts')
+                );
+              })
               .map(album => (
                 <Album
                   key={album.id}

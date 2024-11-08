@@ -2,7 +2,8 @@ const sharedBackgroundStyles = {
   minHeight: '100vh',
   backgroundSize: 'cover',
   backgroundPosition: 'center',
-  backgroundAttachment: 'fixed',
+  backgroundAttachment: ['', 'fixed', 'fixed'],
+  backgroundRepeat: 'no-repeat',
 };
 
 export const HeroShout = {
@@ -33,21 +34,21 @@ export const HeroShout = {
     },
     contentStack: {
       //   bg: 'rgba(0,0,0,.25)',
-      p: 8,
+      p: [2, 2, 8],
       maxWidth: '4xl',
       //   bg: 'rgba(0,0,0,.75)',
       borderRadius: 'xl',
     },
     title: {
       as: 'h1',
-      fontSize: '4xl',
+      fontSize: ['lg', '', 'xl', '4xl'],
       color: 'white',
       fontWeight: 'bold',
     },
     subtitle: {
       as: 'h2',
       color: 'white',
-      fontSize: '2xl',
+      fontSize: ['md', '', '2xl'],
     },
     body: {
       as: 'p',
@@ -60,6 +61,7 @@ export const HeroShout = {
       ...sharedBackgroundStyles,
       justifyContent: 'center',
       alignItems: 'center',
+      p: 8,
     },
     shoutStack: {
       bg: 'rgba(0,0,0,.75)',
@@ -70,11 +72,13 @@ export const HeroShout = {
     },
     shoutTitle: {
       as: 'h3',
-      fontSize: '4xl',
+      fontSize: ['lg', '', 'xl', '4xl'],
       color: 'primary',
-      bg: 'black',
+      //   bg: 'black',
       px: [8, 8, 8, 12],
       borderRadius: 'md',
+      textTransform: 'uppercase',
+      fontWeight: 'bold',
     },
     shoutText: {
       as: 'p',
@@ -97,6 +101,7 @@ export const HeroShout = {
     image: {
       width: 600,
       height: 600,
+      borderRadius: 'md',
     },
   },
   variants: {},

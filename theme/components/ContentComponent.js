@@ -2,7 +2,7 @@ const baseStyle = {
   containerStyle: {
     display: 'flex',
     flexDirection: 'column',
-    alignItems: 'center',
+    alignItems: 'flex-start',
     justifyContent: 'center',
     p: 4,
     position: 'relative',
@@ -13,21 +13,24 @@ const baseStyle = {
     fontWeight: 'bold',
     textTransform: 'uppercase',
     mb: 4,
+    color: 'white',
   },
   subtitleStyle: {
     fontSize: 'xl',
     mb: 2,
+    color: 'white',
   },
   bodyContainerStyle: {
     mt: 2,
     lineHeight: 1.75,
     fontSize: 'md',
     fontWeight: 500,
+    color: 'white',
   },
   button: {
     mt: 4,
     mx: 2,
-    variant: 'solid',
+    variant: 'outline',
   },
 };
 
@@ -36,25 +39,32 @@ export const ContentComponent = {
   variants: {
     darkText: {
       containerStyle: {
-        bg: 'gray.800',
         color: 'dark',
+        maxWidth: '4xl',
+        mx: 'auto',
       },
       titleStyle: {
-        color: 'dark',
+        color: 'primary',
+        // bg: 'dark',
+        // p: 4,
       },
       subtitleStyle: {
         color: 'dark',
       },
       bodyContainerStyle: {
         color: 'dark',
+        fontSize: 'lg',
+        lineHeight: 2,
       },
       button: {
-        variant: 'outline',
+        colorScheme: 'teal',
       },
     },
     whiteText: {
       containerStyle: {
         color: 'white',
+        maxWidth: '4xl',
+        mx: 'auto',
       },
       titleStyle: {
         color: 'white',
@@ -64,8 +74,11 @@ export const ContentComponent = {
       },
       bodyContainerStyle: {
         color: 'white',
+        fontSize: 'lg',
       },
-      button: {},
+      button: {
+        variant: 'primary',
+      },
     },
   },
 };

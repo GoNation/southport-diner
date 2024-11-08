@@ -46,9 +46,9 @@ export const Button = {
       px: 12,
 
       _hover: {
-        bg: 'gray.900',
-        borderColor: 'gray.900',
-        color: 'primary',
+        bg: 'dark',
+        borderColor: 'accent',
+        // color: 'primary',
       },
       _active: {
         bg: 'dark',

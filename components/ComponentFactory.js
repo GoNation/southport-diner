@@ -30,6 +30,7 @@ import {
   PopUp,
   ImageBoxes,
   HeroShout,
+  MasonryBoxes,
 } from 'gonation-components';
 import { convertStringToArray } from 'helpers/convertStringToArray';
 import { convertMenuDataToTestimonials } from 'helpers';
@@ -446,6 +447,25 @@ const componentFactory = (componentConfig, commonData, siteConfig) => {
         <>
           <HeroShout {...heroShoutData} />
         </>
+      );
+    case 'MasonryBoxes':
+      const masonryBoxesData = findMultipleStoriesByNames(
+        identifier || componentConfig.storyName,
+        commonData.storiesData.general,
+        true
+      );
+      return (
+        <MasonryBoxes
+          variant={config?.variant || componentConfig.variant}
+          data={masonryBoxesData.map(data => {
+            return {
+              imageUrl: data.images[0],
+              title: data.title || data?.linkTitle,
+              description: data.title,
+              href: data?.linkAddress,
+            };
+          })}
+        />
       );
 
     default:

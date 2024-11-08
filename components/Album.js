@@ -8,13 +8,15 @@ const Album = ({ album, coverPhotoIndex = 0, customStyling, onAlbumClick }) => {
     position: 'absolute',
     zIndex: 1,
     color: 'white',
-    bg: 'primary',
+    bg: 'dark',
     width: '100%',
     bottom: 0,
     transition: 'top 0.3s ease, transform 0.3s ease',
     textAlign: 'center',
     fontSize: ['sm', 'md'],
     fontFamily: 'heading',
+    fontWeight: 'bold',
+    textTransform: 'uppercase',
     py: 2,
   };
 

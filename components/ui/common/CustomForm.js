@@ -37,13 +37,14 @@ const CustomForm = ({
                 <Address
                   business={aboutData}
                   style={styles.address}
-                  fill={'#000'}
+                  fill={'#fff'}
                 />
                 <Phone
                   phone={aboutData.phone}
                   color="dark"
                   fontSize={'lg'}
-                  fill={'#000'}
+                  style={styles.phone}
+                  fill={'#fff'}
                 />
               </VStack>
             </>

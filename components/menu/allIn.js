@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import MenuItem from './menuItem';
 import shortid from 'shortid';
 import slugify from 'slugify';
@@ -12,10 +12,15 @@ import {
   Flex,
   Skeleton,
   useStyleConfig,
+  Select,
 } from '@chakra-ui/react';
 import Section from './Section';
 import Image from 'next/image';
 import buildAvatar from 'helpers/general/buildAvatar';
+import {
+  ImageVisibilityProvider,
+  useImageVisibility,
+} from 'components/ImageVisibilityContext';
 
 const AllIn = ({
   menuData,
@@ -29,6 +34,7 @@ const AllIn = ({
   const { variant } = config;
   const styles = useStyleConfig('AllIn', { variant });
   const [isLargerThan768] = useMediaQuery('(min-width: 768px)');
+  const { showImages, setShowImages } = useImageVisibility();
 
   const splitSectionChildren = section => {
     return section.inventory.reduce(
@@ -47,6 +53,10 @@ const AllIn = ({
       if (!item.imageUrl.includes('default')) count++;
     });
     return count;
+  };
+
+  const handleImageToggle = e => {
+    setShowImages(e.target.value === 'true');
   };
 
   return (
@@ -78,6 +88,14 @@ const AllIn = ({
             ← Back
           </Button>
         )}
+
+        <Box maxW={210} mb={4}>
+          <Select onChange={handleImageToggle} value={showImages}>
+            <option value={true}>Show Images</option>
+            <option value={false}>Hide Images</option>
+          </Select>
+        </Box>
+
         {menuData?.section?.desc && (
           <Section
             section={menuData.section}
@@ -119,4 +137,10 @@ const AllIn = ({
   );
 };
 
-export default AllIn;
+const AllInWithProvider = props => (
+  <ImageVisibilityProvider>
+    <AllIn {...props} />
+  </ImageVisibilityProvider>
+);
+
+export default AllInWithProvider;

@@ -1,13 +1,13 @@
 export const Price = {
   baseStyle: {
     label: {
-      fontSize: 'sm',
+      fontSize: 'xs',
       color: 'dark',
       fontFamily: 'body',
       mr: 2,
     },
     price: {
-      fontSize: 'sm',
+      fontSize: 'xs',
       color: 'dark',
       textAlign: 'right',
       fontFamily: 'body',

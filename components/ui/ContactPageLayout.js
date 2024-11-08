@@ -16,7 +16,7 @@ const ContactPageLayout = ({ aboutData, fields, iframe, config, hideMap }) => {
         flexDir={['column', 'column', 'column', 'row']}
         py={[0]}
         align={['stretch', '', '', 'center']}
-        backgroundColor={'secondary'}
+        backgroundColor={'dark'}
         id="contact"
       >
         <Box

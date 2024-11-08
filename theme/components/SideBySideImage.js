@@ -2,6 +2,7 @@ export const SideBySideImage = {
   baseStyle: {
     sideBySideImageContainerStyle: {
       py: [3, 3, 3, 8, 24],
+      bg: 'dark',
     },
     outerContainer: {
       position: 'relative',
@@ -18,7 +19,7 @@ export const SideBySideImage = {
     },
     innerContainer: {
       zIndex: 2,
-      display: { base: 'block', lg: 'grid' },
+      display: { base: 'block', md: 'grid' },
       gridTemplateColumns: '1fr 1fr',
       height: '100%',
       alignItems: 'center',
