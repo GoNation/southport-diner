@@ -5,7 +5,7 @@
     "pageDescription": "Bring Southport Diner’s delicious, handcrafted dishes to your next event. Our catering options cater to every taste, from traditional diner favorites to healthy options."
   },
   "navVisibility": {
-    "order": 3
+    "order": 2
   },
   "advancedSettings": {
     "fetchingStrategy": "static",

@@ -118,7 +118,7 @@ const AllIn = ({
             );
           })}
 
-        {menuData.inventory[0].item && (
+        {menuData?.inventory[0]?.item && (
           <Box {...styles.itemBox}>
             {menuData.inventory.map(({ item }) => (
               <MenuItem
