@@ -54,9 +54,6 @@ const MenuItem = ({ item, withDollar, sectionImagesCount, variant = null }) => {
       />
       <Grid
         templateColumns={sectionImagesCount === 0 ? ['1fr'] : ['1fr']}
-        border={'1px solid'}
-        borderColor={'gray.100'}
-        borderRadius={'md'}
         pr={5}
       >
         {/* todo will need to bring this back / handle props for conditional rendering inline images */}
