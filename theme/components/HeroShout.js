@@ -46,6 +46,7 @@ export const HeroShout = {
       fontWeight: 'bold',
     },
     subtitle: {
+      display: 'none',
       as: 'h2',
       color: 'white',
       fontSize: ['md', '', '2xl'],
