@@ -48,6 +48,7 @@ export const PageHero = {
       letterSpacing: 3,
       maxWidth: '5xl',
       mx: 'auto',
+      textShadow: '2px 2px 4px #000000',
     },
     heading2: {
       as: 'h2',
