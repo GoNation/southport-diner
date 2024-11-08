@@ -48,7 +48,7 @@ export const MasonryBoxes = {
       position: 'absolute',
       color: 'white',
       py: 2,
-      fontSize: ['lg', 'xl', '2xl', '4xl'],
+      fontSize: ['xl', 'xl', '2xl', '4xl'],
       fontWeight: 'bold',
       ml: 8,
       mb: 4,

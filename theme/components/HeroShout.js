@@ -1,8 +1,8 @@
 const sharedBackgroundStyles = {
-  minHeight: '100vh',
+  minHeight: ['60vh', '', '100vh'],
   backgroundSize: 'cover',
   backgroundPosition: 'center',
-  backgroundAttachment: ['', 'fixed', 'fixed'],
+  backgroundAttachment: ['', '', 'fixed'],
   backgroundRepeat: 'no-repeat',
 };
 
@@ -41,7 +41,7 @@ export const HeroShout = {
     },
     title: {
       as: 'h1',
-      fontSize: ['lg', '', 'xl', '4xl'],
+      fontSize: ['lg', '', 'xl', '3xl'],
       color: 'white',
       fontWeight: 'bold',
     },

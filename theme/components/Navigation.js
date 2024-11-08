@@ -3,17 +3,20 @@ export const Navigation = {
     navigation: {
       gridTemplateColumns: 'repeat(12, 1fr)',
       alignItems: 'center',
+      bg: 'dark',
+      px: 4,
+      py: 2,
     },
     // Grid Item containers
     logoGridItem: {
-      colSpan: [10, 10, 2], // Logo takes up more space on mobile
+      colSpan: [10, 10, 3], // Logo takes up more space on mobile
       display: 'flex',
       alignItems: 'center',
     },
     navItemsGridItem: {
-      colSpan: [0, 0, 8], // Hide nav items on mobile, show on larger screens
+      colSpan: [0, 0, 9], // Hide nav items on mobile, show on larger screens
       display: ['none', 'none', 'flex'],
-      justifyContent: 'center',
+      justifyContent: 'end',
     },
     hamburgerGridItem: {
       colSpan: [2, 2, 2], // Show the hamburger menu on mobile
@@ -21,13 +24,14 @@ export const Navigation = {
       justifyContent: 'flex-end',
     },
     alternateGridItem: {
-      colSpan: [0, 0, 2], // Only show this on larger screens
+      colSpan: [0, 0, 0], // Only show this on larger screens
       display: ['none', 'none', 'flex'],
       justifyContent: 'flex-end',
     },
     // Logo styles
     logoContainer: {
       align: 'center',
+      maxWidth: [125, 125, 175],
     },
     logo: {
       width: 300,
@@ -40,11 +44,13 @@ export const Navigation = {
       left: 0,
       width: '100vw',
       height: '100vh',
-      bg: 'gray.800',
-      zIndex: 10, // Menu is underneath the hamburger icon
+      bg: 'primary',
+      zIndex: 99999, // Menu is underneath the hamburger icon
       display: 'flex',
       alignItems: 'center',
+      flexDirection: 'column',
       justifyContent: 'center',
+      bg: 'dark',
     },
     hamburgerIconOpen: {
       position: 'fixed', // Fix the position of the hamburger icon
@@ -54,7 +60,7 @@ export const Navigation = {
     },
     hamburger: {
       size: 24,
-      color: 'red',
+      color: 'white',
     },
     mobileMenuContent: {
       flexDirection: 'column',

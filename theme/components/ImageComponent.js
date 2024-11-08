@@ -18,9 +18,11 @@ export const ImageComponent = {
       zIndex: 0,
       height: ['100%', '', ''],
       width: '100%',
+      borderRadius: '8px',
     },
     imageStyle: {
       width: '100%',
+      borderRadius: '8px',
     },
   },
   variants: {},
