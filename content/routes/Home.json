@@ -1,0 +1,34 @@
+{
+  "name": "Home",
+  "basicInfo": {
+    "path": "/",
+    "seoPageTitle": "",
+    "pageDescription": ""
+  },
+  "heroConfig": {
+    "hidePageHero": true
+  },
+  "navVisibility": {
+    "order": -1,
+    "hidden": true
+  },
+  "advancedSettings": {
+    "fetchingStrategy": "static",
+    "dataTypes": {
+      "stories": true,
+      "shout": true,
+      "poweredImages": true,
+      "about": true,
+      "gallery": true
+    }
+  },
+  "pageComponents": [
+    {
+      "componentName": "Gallery",
+      "identifier": "Homepage Hero",
+      "config": {
+        "id": "gallery"
+      }
+    }
+  ]
+}

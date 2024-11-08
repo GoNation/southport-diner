@@ -1,0 +1,27 @@
+{
+  "name": "Gallery",
+  "basicInfo": {
+    "path": "/gallery",
+    "seoPageTitle": "",
+    "pageDescription": ""
+  },
+  "navVisibility": {
+    "order": 4
+  },
+  "advancedSettings": {
+    "fetchingStrategy": "static",
+    "dataTypes": {
+      "stories": true,
+      "shout": true,
+      "poweredImages": true,
+      "about": true,
+      "gallery": true
+    }
+  },
+  "pageComponents": [
+    {
+      "componentName": "AlbumGallery",
+      "configName": "galleryConfig"
+    }
+  ]
+}

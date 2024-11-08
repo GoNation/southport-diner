@@ -1,0 +1,21 @@
+{
+  "name": "",
+  "basicInfo": {
+    "seoPageTitle": "",
+    "pageDescription": ""
+  },
+  "navVisibility": {
+    "order": 6
+  },
+  "advancedSettings": {
+    "fetchingStrategy": "static",
+    "dataTypes": {
+      "stories": true,
+      "shout": true,
+      "poweredImages": true,
+      "about": true,
+      "gallery": true
+    }
+  },
+  "pageComponents": []
+}

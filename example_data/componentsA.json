@@ -1,0 +1,103 @@
+{
+  "pageComponents": [
+    {
+      "componentName": "Hero",
+      "storyName": "Homepage hero",
+      "configName": "heroConfig",
+      "variation": "heroConfig"
+    },
+    {
+      "componentName": "ShoutCard"
+    },
+    {
+      "componentName": "ContentBanner",
+      "storyName": "Homepage story 1",
+      "variation": "default",
+      "contentVariation": "darkText"
+    },
+    {
+      "componentName": "SideBySideImage",
+      "storyName": "Homepage story 3",
+      "sideBySideVariation": "default",
+      "contentVariation": "sideBySideReversed",
+      "imageVariation": "default",
+      "config": {
+        "reversed": false,
+        "ignoreQuery": true
+      }
+    },
+    {
+      "componentName": "SideBySideImage",
+      "storyName": "Homepage story 4",
+      "sideBySideVariation": "default",
+      "contentVariation": "sideBySideReversed",
+      "imageVariation": "default",
+      "config": {
+        "reversed": true,
+        "ignoreQuery": true
+      }
+    },
+    {
+      "componentName": "ListCards",
+      "config": {
+        "data": ["Homepage story 5", "Homepage story 6"]
+      }
+    },
+    { "componentName": "ImageGrid", "identifier": "Homepage Story 4" },
+    {
+      "componentName": "ImageBoxes",
+      "identifier": "Homepage Story 4 (2),  Homepage Story 5, Homepage story 6"
+    },
+    {
+      "componentName": "Testimonials",
+      "identifier": 2,
+      "carouselConfiguration": {
+        "showArrows": false,
+        "showStatus": false
+      }
+    },
+    {
+      "componentName": "PopUp"
+    },
+    {
+      "componentName": "ContactPageLayout",
+      "configName": "contactPageLayoutConfig"
+    },
+    {
+      "componentName": "Events"
+    },
+    {
+      "componentName": "Gallery",
+      "configName": "galleryConfig"
+    },
+    {
+      "componentName": "Menu",
+      "configName": "menuConfigA"
+    },
+    {
+      "componentName": "Gallery",
+      "config": {
+        "configName": "galleryConfig"
+      }
+    },
+    {
+      "componentName": "Parallax",
+      "identifier": "Homepage story 7"
+    },
+    {
+      "componentName": "Instagram",
+      "config": {
+        "widgetId": "009141f749b25d4e819b23e131268132"
+      }
+    },
+    {
+      "componentName": "YoutubeHero",
+      "config": {
+        "id": "OAUv7pOVdD0"
+      }
+    },
+    {
+      "componentName": "ButtonPopup"
+    }
+  ]
+}

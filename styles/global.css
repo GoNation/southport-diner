@@ -1,0 +1,21 @@
+.carousel .slider-wrapper.axis-horizontal .slider .slide {
+  z-index: 9 !important;
+}
+
+.carousel .control-dots {
+	z-index: 99!important;
+}
+
+.build-your-own {
+}
+
+/* make input placeholder text white */
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder
+ { /* WebKit, Blink, Edge */
+	color:    white;
+}
+
+.rbc-event, .rbc-day-slot .rbc-background-event {
+	background: #37557D!important;
+}

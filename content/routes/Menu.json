@@ -1,0 +1,27 @@
+{
+  "name": "Menu",
+  "basicInfo": {
+    "path": "/menu",
+    "seoPageTitle": "",
+    "pageDescription": ""
+  },
+  "navVisibility": {
+    "order": 3
+  },
+  "advancedSettings": {
+    "fetchingStrategy": "static",
+    "dataTypes": {
+      "stories": true,
+      "shout": true,
+      "poweredImages": true,
+      "about": true,
+      "gallery": true
+    }
+  },
+  "pageComponents": [
+    {
+      "componentName": "Menu",
+      "configName": "menuConfigA"
+    }
+  ]
+}

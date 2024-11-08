@@ -1,0 +1,29 @@
+{
+  "name": "About",
+  "basicInfo": {
+    "path": "/about",
+    "seoPageTitle": "",
+    "pageDescription": ""
+  },
+  "navVisibility": {
+    "order": 1
+  },
+  "advancedSettings": {
+    "fetchingStrategy": "static",
+    "dataTypes": {
+      "stories": true,
+      "shout": true,
+      "poweredImages": true,
+      "about": true,
+      "gallery": true
+    }
+  },
+  "pageComponents": [
+    {
+      "componentName": "ContentBanner",
+      "storyName": "about page",
+      "variation": "default",
+      "contentVariation": "darkText"
+    }
+  ]
+}

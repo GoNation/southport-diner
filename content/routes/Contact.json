@@ -1,0 +1,27 @@
+{
+  "name": "Contact",
+  "basicInfo": {
+    "path": "/contact",
+    "seoPageTitle": "",
+    "pageDescription": ""
+  },
+  "navVisibility": {
+    "order": 12
+  },
+  "advancedSettings": {
+    "fetchingStrategy": "static",
+    "dataTypes": {
+      "stories": true,
+      "shout": true,
+      "poweredImages": true,
+      "about": true,
+      "gallery": true
+    }
+  },
+  "pageComponents": [
+    {
+      "componentName": "ContactPageLayout",
+      "configName": "contactPageLayoutConfig"
+    }
+  ]
+}
