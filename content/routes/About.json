@@ -2,8 +2,8 @@
   "name": "About",
   "basicInfo": {
     "path": "/about",
-    "seoPageTitle": "",
-    "pageDescription": ""
+    "seoPageTitle": "About Southport Diner | Tradition Meets Fresh Flavors",
+    "pageDescription": "Learn about Southport Diner's rich history, family-driven values, and commitment to serving high-quality, handcrafted meals. Where tradition, wellness, and great food come together."
   },
   "navVisibility": {
     "order": 1
@@ -20,10 +20,15 @@
   },
   "pageComponents": [
     {
-      "componentName": "ContentBanner",
-      "storyName": "about page",
-      "variation": "default",
-      "contentVariation": "darkText"
+      "componentName": "SideBySideImage",
+      "storyName": "About page story",
+      "sideBySideVariation": "default",
+      "contentVariation": "sideBySideReversed",
+      "imageVariation": "default",
+      "config": {
+        "reversed": false,
+        "ignoreQuery": true
+      }
     }
   ]
 }

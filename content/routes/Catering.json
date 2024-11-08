@@ -1,0 +1,26 @@
+{
+  "name": "Catering",
+  "basicInfo": {
+    "seoPageTitle": "Catering from Southport Diner | Flavorful Catering for Any Occasion",
+    "pageDescription": "Bring Southport Diner’s delicious, handcrafted dishes to your next event. Our catering options cater to every taste, from traditional diner favorites to healthy options."
+  },
+  "navVisibility": {
+    "order": 3
+  },
+  "advancedSettings": {
+    "fetchingStrategy": "static",
+    "dataTypes": {
+      "stories": true,
+      "shout": true,
+      "poweredImages": true,
+      "about": true,
+      "gallery": true
+    }
+  },
+  "pageComponents": [
+    {
+      "componentName": "Menu",
+      "configName": "menuConfigB"
+    }
+  ]
+}

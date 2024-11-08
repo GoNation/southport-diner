@@ -2,8 +2,9 @@
   "name": "Contact",
   "basicInfo": {
     "path": "/contact",
-    "seoPageTitle": "",
-    "pageDescription": ""
+
+    "seoPageTitle": "Contact Southport Diner | Get in Touch with Us",
+    "pageDescription": "Have questions or want to make a reservation? Contact Southport Diner today! Call us at 203-292-6699 or visit us at 3350 Post Rd, Southport, CT."
   },
   "navVisibility": {
     "order": 12

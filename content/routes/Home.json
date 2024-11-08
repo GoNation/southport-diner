@@ -2,8 +2,8 @@
   "name": "Home",
   "basicInfo": {
     "path": "/",
-    "seoPageTitle": "",
-    "pageDescription": ""
+    "seoPageTitle": "Southport Diner | Classic Diner Fare with a Modern Twist",
+    "pageDescription": "Experience a fusion of old-school diner favorites and healthy, contemporary cuisine at Southport Diner. Enjoy quality meals with gluten-free and vegan options. Visit us in Southport, CT."
   },
   "heroConfig": {
     "hidePageHero": true
@@ -24,11 +24,35 @@
   },
   "pageComponents": [
     {
-      "componentName": "Gallery",
+      "componentName": "HeroShout",
       "identifier": "Homepage Hero",
+      "config": {}
+    },
+    {
+      "componentName": "SideBySideImage",
+      "storyName": "menu homepage story",
+      "sideBySideVariation": "default",
+      "contentVariation": "sideBySideReversed",
+      "imageVariation": "default",
       "config": {
-        "id": "gallery"
+        "reversed": false,
+        "ignoreQuery": true
       }
+    },
+    {
+      "componentName": "SideBySideImage",
+      "storyName": "about homepage story",
+      "sideBySideVariation": "default",
+      "contentVariation": "sideBySideReversed",
+      "imageVariation": "default",
+      "config": {
+        "reversed": true,
+        "ignoreQuery": true
+      }
+    },
+    {
+      "componentName": "MasonryBoxes",
+      "identifier": "catering image box story, events image box story, gallery image box homepage, contact us image box homepage"
     }
   ]
 }

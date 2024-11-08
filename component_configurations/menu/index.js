@@ -5,5 +5,5 @@ export const menuConfigA = {
 
 export const menuConfigB = {
   showLogo: true,
-  poweredList: 4,
+  poweredList: 2,
 };

@@ -98,6 +98,15 @@
     },
     {
       "componentName": "ButtonPopup"
+    },
+    {
+      "componentName": "HeroShout",
+      "identifier": "Homepage Hero",
+      "config": {}
+    },
+    {
+      "componentName": "MasonryBoxes",
+      "identifier": "Homepage Story 2,  Homepage Story 3, Homepage story 4, Homepage story 5"
     }
   ]
 }

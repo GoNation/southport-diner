@@ -1,0 +1,25 @@
+{
+  "name": "Events",
+  "basicInfo": {
+    "seoPageTitle": "Events at Southport Diner | What’s Happening at Our Diner",
+    "pageDescription": "Stay up-to-date with the latest events at Southport Diner. From special promotions to community gatherings, discover the fun we’re cooking up at your favorite local diner."
+  },
+  "navVisibility": {
+    "order": 5
+  },
+  "advancedSettings": {
+    "fetchingStrategy": "static",
+    "dataTypes": {
+      "stories": true,
+      "shout": true,
+      "poweredImages": true,
+      "about": true,
+      "gallery": true
+    }
+  },
+  "pageComponents": [
+    {
+      "componentName": "Events"
+    }
+  ]
+}

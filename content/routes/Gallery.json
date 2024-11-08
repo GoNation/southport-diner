@@ -1,12 +1,11 @@
 {
   "name": "Gallery",
   "basicInfo": {
-    "path": "/gallery",
-    "seoPageTitle": "",
-    "pageDescription": ""
+    "seoPageTitle": "Southport Diner Gallery | Mouthwatering Diner Favorites",
+    "pageDescription": "Feast your eyes on our mouthwatering dishes! Browse through the Southport Diner gallery to get a taste of our delicious, fresh meals and inviting atmosphere."
   },
   "navVisibility": {
-    "order": 4
+    "order": 8
   },
   "advancedSettings": {
     "fetchingStrategy": "static",
