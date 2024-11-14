@@ -1,5 +1,5 @@
 const sharedBackgroundStyles = {
-  minHeight: ['60vh', '', '100vh'],
+  //   minHeight: ['60vh', '', '100vh'],
   backgroundSize: 'cover',
   backgroundPosition: 'center',
   backgroundAttachment: ['', '', 'fixed'],
@@ -28,9 +28,17 @@ export const HeroShout = {
       width: '100%',
       padding: 8,
       textAlign: 'center',
-      minHeight: '100vh',
+      minHeight: ['', '', '100vh'],
+      height: 'auto',
       zIndex: 2,
       position: 'relative',
+      backgroundImage: [
+        'url("https://res.cloudinary.com/gonation/w_1800/q_auto/f_auto/gonation.data.prod/x3pag46oy6wfegqzeep0")',
+        '',
+        '',
+        'none',
+      ],
+      backgroundSize: 'cover',
     },
     contentStack: {
       //   bg: 'rgba(0,0,0,.25)',
