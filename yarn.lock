@@ -3082,10 +3082,10 @@ globby@^11.1.0:
     merge2 "^1.4.1"
     slash "^3.0.0"
 
-gonation-components@^0.0.94:
-  version "0.0.94"
-  resolved "https://registry.yarnpkg.com/gonation-components/-/gonation-components-0.0.94.tgz#36a26c50076f9bce95c8cae1f9d1b66a44eeebb4"
-  integrity sha512-tH+DwZf4AgG+xLRmNsg9mpLW3ENeazt49gFToWxdIj5yZieOSFOnbh9pI+QOoaD3+U6i5ZmEHqOhyFWMviUuDg==
+gonation-components@^0.0.147:
+  version "0.0.147"
+  resolved "https://registry.yarnpkg.com/gonation-components/-/gonation-components-0.0.147.tgz#3be94c81cfb315ee3453538c0e18f957f9b416d7"
+  integrity sha512-46PSN6clV/J/gSjXgyyT+v+qwf1uFuUapNTmjXl05O/Pi8ywxRecM+jj6k+cP6fbrVnL4431pm7lmWWPd5y94w==
   dependencies:
     axios "^1.7.3"
     axios-jsonp "^1.0.4"
