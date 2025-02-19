@@ -45,6 +45,7 @@ const findEventById = (id, events) => {
 
 // componentConfig is the object with type, storyName, storyTags etc. commonData is the actual GN data
 const componentFactory = (componentConfig, commonData, siteConfig) => {
+  const business = commonData.aboutData;
   const {
     identifier,
     storyName,
@@ -61,7 +62,7 @@ const componentFactory = (componentConfig, commonData, siteConfig) => {
   const ctas = shout?.ctas || {};
   const isDefaultImage = image?.isDefault;
   const cloudinaryId = isDefaultImage
-    ? business.avatar.image.cloudinaryId
+    ? business?.avatar?.image?.cloudinaryId
     : image?.image?.cloudinaryId;
   const shoutImage = `${commonData?.shoutData.imageBaseUrl}/${cloudinaryId}`;
   switch (componentConfig.type || componentConfig.componentName) {
