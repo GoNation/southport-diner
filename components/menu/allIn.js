@@ -89,13 +89,6 @@ const AllIn = ({
           </Button>
         )}
 
-        <Box maxW={210} mb={4}>
-          <Select onChange={handleImageToggle} value={showImages}>
-            <option value={true}>Show Images</option>
-            <option value={false}>Hide Images</option>
-          </Select>
-        </Box>
-
         {menuData?.section?.desc && (
           <Section
             section={menuData.section}
